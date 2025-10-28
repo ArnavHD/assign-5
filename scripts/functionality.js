@@ -4,14 +4,6 @@ let index = 0;
 
 document.getElementById('theme')
     .addEventListener('click', function () {
-        // Remove the current color
-        // console.log('got clicked');
-        // body.classList.remove(colors[index]);
-        // document.getElementById('first-div').classList.remove(colors[index]);
-        // document.getElementById('second-div').classList.remove(colors[index]);
-        // document.getElementById('cover-grid').classList.remove(colors[index]);
-
-        // Move to next color
         index++;
         if (index === colors.length) {
             index = 0;
@@ -23,3 +15,17 @@ document.getElementById('theme')
         document.getElementById('second-div').style.backgroundColor = colors[index];
         document.getElementById('cover-grid').style.backgroundColor = colors[index];
     });
+
+const fiveText = document.getElementById('six-text');
+const num23 = document.getElementById('num-23');
+
+const buttons = document.querySelectorAll('.btn');
+for(const button of buttons){
+    button.addEventListener('click', function(){
+        console.log(button.id)
+        button.classList.remove('bg-[#3752FD]');
+        button.style.backgroundColor = 'rgba(55, 82, 253, 0.2)';
+        button.disabled = true;
+    })
+}
+
