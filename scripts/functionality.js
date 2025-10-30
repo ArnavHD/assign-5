@@ -123,3 +123,4 @@ document.querySelector('.link-qna')
     .addEventListener('click', function(){
         window.location.href = './Qna.html'
     })
+
